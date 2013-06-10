@@ -1,0 +1,162 @@
+\documentclass[preprint2]{aastex}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{natbib}
+\usepackage[xindy, toc, hyperfirst=false, nolist, nostyles, sanitize={name=false,description=false,symbol=false}]{glossaries}
+\glsdisablehyper
+%\usepackage[hyperref,x11names, table]{xcolor}
+
+
+
+%graphic rules
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+% Paths for tables and plots - normally are in subdirectories, but for submission can be in the main dir
+\newcommand{\plotdir}{plots}
+\newcommand{\tabledir}{tables}
+
+
+%define datasets used
+
+
+
+%inputting the glossary
+\input{../tex-glossary/glossary.tex}
+
+
+\shortauthors{W.E. Kerzendorf et al.}
+\shorttitle{SN1604 companion search}
+
+\begin{document}
+
+% TITLE AND AUTHORS
+%-----------
+\title{A reconnaissance of the possible donor stars to the Kepler supernova}
+
+\author{Wolfgang~E.~Kerzendorf\altaffilmark{1}\altaffilmark{2}, Michael Childress\altaffilmark{1}, Julia Scharw\"{a}chter\altaffilmark{1}, Tuan Do\altaffilmark{2}, Brian~P.~Schmidt\altaffilmark{1}} 
+\email{wkerzend@mso.anu.edu.au}
+
+
+\altaffiltext{1}{Research School of Astronomy and
+Astrophysics, Mount Stromlo Observatory, Cotter Road, Weston Creek,
+ACT 2611, Australia}
+
+\altaffiltext{2}{Department of Astronomy and Astrophysics, University of Toronto, 50 Saint George Street, Toronto, ON M5S 3H4, Canada}
+
+\begin{abstract}
+In this work, we present a spectroscopic search for the surviving companion of \sn{1604}. Previous work, has searched two remnants in the Galaxy and two in the Magellanic clouds without success. In this paper we scrutinize 24 central stars  of the SN~1604 remnant to search for a possible surviving companion star. We conclude that all candidates are consistent with unrelated stars and none exhibit properties uniquely consistent with a companion . Finally, we can rule out a red giant companion star (suggested previously for \sn{1604}) with high certainty (the brightest star is V=16.5, a red giant scenario requires a star with V$\approx 12$).
+\end{abstract}
+
+\maketitle
+\section{Introduction}
+
+\sneia\ provide a means to measure cosmological distances and are also for being major contributors to the chemical evolution of the Universe, enriching the cosmos with large amounts of Iron Peak elements. Despite considerable effort to identify the systems that become SN Ia over the past decade, no consensus has yet emerged. It is widely accepted that \sneia\ are the thermonuclear explosions of a massive \gls{cowd} . The community suggests two main progenitor scenarios \cite[for a review see][and references therein]{2012NewAR..56..122W}. In the first scenario, the WD accretes mass from a non-degenerate companion (known as a donor star) until the central temperature and density exceed the cooling threshold and a run-away nuclear burning occurs. This is usually described as the \gls{sds}. In the second scenario, two WDs merge, leading to a cataclysmic explosion (\gls{dds}).
+
+Both events make a number of predictions, however only the \gls{sds} offers a directly observable prediction - the remaining donor star. On the face of it, the SD scenario looks easily falsifiable, the donor star should remain \citep[e.g.][]{2000ApJS..128..615M} and be easy to detect in historical remnants. There has been considerable effort \citep{2004Natur.431.1069R, 2009ApJ...691....1G,2009ApJ...701.1665K,2012Natur.481..164S,2012Natur.489..533G,2012arXiv1210.2713K,2012ApJ...759....7K, 2012ApJ...747L..19E} to find the donor stars of ancient supernovae. Two remnants in the LMC and \sn{1006}\ have proven to be void of progenitors to a relatively stringent detection limit. A possible progenitor has been found in SN 1572 \citep{2004Natur.431.1069R}, although the validity of this connection has been challenged \citep{2012arXiv1210.2713K}. Despite, these negative results this does not necessarily disprove the validity of the \gls{sds}, as one can construct scenarios for the single-degenerate case, which produce surviving companions that do not stand out among their neighbouring stars \citep[e.g.][]{2012ApJ...760...21P, 2013arXiv1303.2691L, 2003astro.ph..3660P}. 
+
+The recent discoveries of \gls{csm} around roughly a quarter of normal Type Ia supernovae \citep{2007Sci...317..924P, 2009ApJ...702.1157S, 2011Sci...333..856S, 2012ApJ...752..101F} seemingly suggests two subtypes. As \gls{csm} interaction is favoured by the \gls{sds} and is rarer, the lack of direct detection of a donor star could just be the relative rarity of these objects.
+
+In this work we turn to the last of the young Galactic supernova remnants - the remnant of \sn{1604}\ (also known as Kepler's \sn). There's a dispute about the precise distance \citep[$4-6.4$\,\kpc; see][and references therein]{2012A&A...537A.139C}, and we choose to adopt the upper and more conservative limit of 6.4~\kpc\ \citep{1999AJ....118..926R} for this work. Furthermore, there's a known maximum apparent brightness \citep[V=-3;][]{1971SvA....14..798P}, which, together with a usual absolute brightness of \sneia \citep[$M_V=19.3][]{2011ApJ...732..129R} and an extinction of $A_V=2.8$ leads to a distance of $\approx 5~\textrm{kpc}$ consistent with the other measurements. The relatively high extinction in the direction of the remnant \citep[$A_V=2.8$, ][]{2007ApJ...668L.135R}, makes stellar photometry and spectroscopy difficult. Compared to its Galactic siblings (\sn{1006}\ and \sn{1572}) the Kepler \snr shows a very unusual structure and the presence of a nitrogen-rich shell.  \citet{2012A&A...537A.139C} attributes the shell to a progenitor with high mass loss prior to explosion - a calling card for the \gls{sds}. This large amount of interstellar matter suggests that Kepler might have belonged to the class of \sneia showing \gls{csm} interaction in their spectra. Finally, the remnant shows a high systemic velocity of  $250~\kms$ \citep{1991ApJ...366..484B,2003A&A...407..249S}. This high systemic velocity, including a radial velocity component of -180~\kms , should help make it possible to more easily identify a potential donor star, as any star associated with the SN should have -180~\kms of motion added into an orbital motion at the time of the explosion.
+
+
+
+Here, we report a photometric and spectroscopic search for a donor star in the \sn{1604}\ remnant. In Section~\ref{sec:observations} we give an overview of the observation of the spectroscopic data and describe the \gls{hst} data. We describe the analysis of the spectroscopic data in Section~\ref{sec:analysis} and discuss its implications in Section~\ref{sec:discussion}. We conclude this paper and discuss possible future work in Section~\ref{sec:conclusion}.
+
+
+\section{Observations}
+\label{sec:observations}
+\subsection{Integral Field Spectroscopy}
+We used the \gls{ifu} called \gls{wifes} mounted on the ANU 2.3m Telescope at the Siding Spring Observatory  to undertake the spectroscopic observations in this study.. The \gls{wifes}-spectrograph is an image slicer with twenty five $38\times 1\arcsec$ slitlets and 0.5\arcsec\ sampling in the spatial direction on the detector. We chose this instrument for its large field of view ($25\arcsec\times38\arcsec$) and a resolution of $R=7000$ required for adequate radial velocity measurements. 
+
+We have adopted \rasc{17}{30}{41}{6} \decl{-21}{29}{17} as the centre of the remnant from \citet{2008ApJ...689..225K}. Due to the potential uncertainty in the centre determination \citep[for a more detailed discussion about the difficulty of centre determination see Section~2.2 in][]{2012ApJ...759....7K} we split up our observations to cover two fields of $25\arcsec\times38\arcsec$ (see Figure~\ref{fig:sn1604_overlay}). This setup gives us a minimum search distance of $19\arcsec$ from the proposed centre, corresponding to a velocity of $1420~\kms$ (in the plane of the sky) assuming a remnant distance of $6.4~\kpc$ \citep{2012A&A...537A.139C}. 
+
+\include{figure_sn1604_overlay}
+
+We selected the I7000 grating which covers a spectral region  ($6830~-~9120~\AA$) with 0.2\AA (7~\kms) resolution. This region includes the \ion{Ca}{2} Triplet (8498\AA, 8542\AA, and 8662\AA) and maximises the Signal to Noise of the stars observed, which are heavily reddened by dust. The \ion{Ca}{2} provides good radial velocity measurements even in low \gls{signalnoise} observations.
+
+The observations were carried out  on 2010 June 15 and 2010 June 16. The exposure time for all observations was $600~\textrm{s}$ with the southern field being observed 33 times ($5.5~h$) and the northern field observed 19 times ($3.2~h$) as weather conditions deteriorated. 
+The seeing ranged between 1.7\arcsec and 2.7\arcsec with a median of 1.9\arcsec (see Figure~\ref{fig:sn1604_candidates} left panel for a sample of the data quality). 
+
+%\include{figure_wifes_data}
+
+\include{figure_sn1604_candidates}
+
+
+WiFeS data were processed using the PyWiFeS package\footnote[1]{{\tt
+http://www.mso.anu.edu.au/pywifes/}}.  Wavelength solutions for each
+data cube were derived from night sky emission lines, achieving a
+residual wavelength solution scatter of 0.1\AA.
+
+
+In a final step, a simple spatial world coordinate system was applied to each cube with the help of \gls{2mass} for object coordinates (as \gls{2mass} shows a similarly broad PSF).
+
+
+
+\subsection{Photometry}
+
+To obtain accurate photometry, we used archival \gls{hst} data (\gls{hst} program GO-9731) observed in August 2003. The data consist of two F550M images with an exposure time of $240\,\textrm{s}$ each, observed with the \gls{acs}. We analyzed the frames using \gls{dolphot} and extracted magnitudes for all stars and corrected it to the V-Band (difference in flux between F550M and V for Vega is 0.12 magnitudes). Table \ref{tab:hst_candidates} shows the magnitudes of stars with more than 10 solar luminosities in the V-Band at the distance of the remnant assuming an extinction of $A_V = 2.8$ \citep{2007ApJ...668L.135R}. In addition, we have supplemented the HST photometry of these objects with photometric information from the \gls{nomad}. Furthermore, Figure~\ref{fig:sn1604_candidates}  (right panel) shows the possible companion candidates and an overlay of the \gls{wifes}-fields onto the \gls{hst} image. 
+
+\include{table_hst_candidates}
+
+
+
+
+
+\section{Analysis}
+\label{sec:analysis}
+ 
+
+Using the HST images as a template we selected extraction regions with an aperture of 2\arcsec, a good compromise between using the available signal and avoiding contamination from close stars. Despite the small aperture, some extraction regions contain two or three stars. The aperture was then summed up over the whole spectral axis. A sky measurement was obtained in a similar fashion using an annulus with an inner radius of 4\arcsec and an outer radius of 6\arcsec. To alleviate contribution of neighbouring stars,  the individual pixels of the sky annuli were median combined during extraction. We scaled the skylines of the sky annuli to the sky lines of the spectra to avoid an over- or under-subtraction to best remove any residual background..
+
+We concentrated on the wavelength region 8400--8700\AA\ for the next part of the analysis - as this contains the strong \ion{Ca}{2} lines which are useful for radial velocity measurements. The sky-frame scale was fit with a minimizer \citep{powell1964efficient} simultaneously with a continuum (third-order polynomial), and a model of the sun (\teff=5780, \logg=4.4, and \feh=0.0). Although the S/N ratio is in principle high enough to measure stellar parameters, the uncertainty in the continuum placement due to sky
+subtraction errors makes the parameter estimations unreliable. In addition, we lack colour photometry to aid in the determination of stellar parameters. The unreliable placement of the continuum does not affect the radial velocity measurements as they only rely on the position and not the depth of lines.
+
+The scaled sky was subtracted from the spectra and the resulting spectra (for each extraction site) were interpolated on a common wavelength grid and summed up. Next, we convolved a solar spectrum to the required resolution and used an RMS technique to find the velocity. Subsequently, we compared each fit with the spectrum and ascertained that the \ion{Ca}{2} features were clearly visible in the candidate spectrum and coincided with the shifted solar spectrum (see Figure~\ref{fig:kepler-g}). Furthermore, in the cases where HST photometry showed the presence of two stars, we checked the RMS fit for secondary minima that arises when there's two distinct sets of spectra. Only Kepler-H showed two clear sets of \ion{Ca}{2} features in the spectrum as well as in the RMS fit (henceforth designated as F1 and F2). Finally, we determined the typical error of the radial velocity to be $\approx4.5~\kms$, by measuring the radial velocity in individual frames of a few candidates and looking at the resulting distribution. 
+
+When compared to model spectra we find that the resolution and quality of the spectra does not allow for a reliable determination of the rotational velocity to better than 200~\kms (see Figure~\ref{fig:kepler-g}). 
+
+\include{figure_kepler_g_comparison}
+
+\include{table_extraction_vrad}
+
+\section{Discussion}
+\label{sec:discussion}
+
+The \gls{sds} predicts an escape velocity of the donor of up to 200\,\kms \citep[see ][]{2008ApJ...677L.109H}. In the case of \sn{1604}, this velocity signature might very easily be lost in the kinematic signature of the Galaxy, although the systemic velocity of the Kepler remnant helps separate candidates from the normal motions of stars along the line of site. We compare our radial-velocity measurements to theoretical predictions by \citet{2008ApJ...677L.109H} and the \gls{besancon} of galactic dynamics (choosing 1 square degree area around \sn{1604}\ and limiting to magnitudes between $15<$V$<20$). In Figure~\ref{fig:sn1604_besancon} we use a Monte Carlo simulation using the distribution of radial velocities from \citet{2008ApJ...677L.109H} and a random distribution of ejection angles to obtain a radial velocity distribution. Furthermore, we center this on \snr{1604}'s systemic radial velocity of -185~\kms \citep{2003A&A...407..249S}. When looking at the \citet{2008ApJ...677L.109H} distribution in Figure~\ref{fig:sn1604_besancon}, only half of the possible cases would produce a star being a significant outlier compared to the unrelated background and foreground stars. However, none of our stars are particular outliers to the \gls{besancon} and our measured radial velocity distribution agrees very well with the \gls{besancon}. Kepler-K can be seen as a slight anomaly - however when assuming that only 1 in our 19 measured radial velocities could be the donor star we obtain only a $36\%$ chance that Kepler-K is the donor star.
+
+\citet{2000ApJS..128..615M} suggests that giant donor stars will be on the order of 1000~\lsun\  for at least 100, 000 years post-explosion. None of the stars in our sample are in that brightness range (the brightest star being Kepler-L with $139~\lsun(V)$ at 6.4~\kpc). There seems to be no viable giant donor located in \sn{1604}. This is a puzzling result, as \citet{2012A&A...537A.139C} and \citet{2013ApJ...764...63B} can explain the unusual \gls{csm} that surround the Kepler remnant, with a $4 - 5 \msun$ AGB donor. \citet{2012A&A...537A.139C} suggest a star with $m_v=12.0 \pm 0.5$ which is not present in our candidates.  \cite{2013arXiv1305.0567W} have suggested that the centre of remnants is often not very easy to determine and suggest widening the progenitor searches. We have employed \gls{nomad} to find bright companions in a 60\arcsec circle around our current centre (see Figure~\ref{fig:sn1604_overlay}). The brightest star in K-Band reaches K=10.5 (distance from centre 43\arcsec)  the brightest star in V-Band reaches 14.7(distance from centre 40\arcsec) , which are not bright enough to  Finally, \citet{2012A&A...537A.139C}  suggest the possibility of only having a white dwarf left over ($0.8~\msun$).  A normal white dwarf would be below our detection limit, however, it seems unlikely that this source can shrink and/or cool enough in just 400 years.
+
+
+In addition to \citet{2000ApJS..128..615M}, there have been two new studies \citep{2012arXiv1205.5028S,2012ApJ...760...21P} detailing the evolution of a main-sequence and sub-giant companion post-explosion. Figure~6 in \citep{2012ApJ...760...21P} shows the luminosity after 400 years to be between $\approx 20 - 275 \lsun$. None of the stars in our sample, which are in this luminosity range, show any very unusual radial velocity. This might suggest that there are also no main-sequence or sub-giant donors in \sn{1604}, with some caveats. First, in some cases we extract the spectrum of two or more stars due to their close proximity on the sky, but do not find two radial velocities (except in extraction aperture Kepler-H). In addition, a run-away star can be hidden in the general distribution of radial velocities in the direction of \sn{1604}. This is due, both, the very broad distribution of radial velocities (as seen in Figure~\ref{fig:sn1604_besancon}) and the possibility of a high proper motion coupled with a low radial velocity. To resolve this degeneracy, we suggest obtaining proper-motion of the candidates for this remnant. 
+
+
+
+\include{figure_sn1604_besancon}
+
+%\include{figure_rcw86_overlay}
+
+
+\section{Conclusion \& Future Work}
+
+\label{sec:conclusion}
+
+In this work, we present photometric and spectroscopic observations of candidate stars in the centre of the \sn{1604}\ remnant. We can rule out red giant companions due to the lack of bright enough stars in the field (brightest star Kepler-L with V=16.5). In addition, we can rule out some candidates in the field, that have inconsistent radial velocity signatures (all stars with a $\vrad>0~\kms$). Finally, the radial velocity measurements do not show any peculiar star in this data set and is thus consistent with the results by the recent studies scrutinizing \sn{1006}\ \citep{2012Natur.489..533G,2012ApJ...759....7K}, and the LMC results \citep{2012ApJ...747L..19E, 2012Natur.481..164S}. All of these results hint at a double-degenerate origin \citep[including scenarios that explain circumstellar interaction; van Kerkwijk priv. comm., ][]{2011MNRAS.417.1466K} for \sneia\ or a modified single-degenerate scenarios that can explain the absence of bright companions \citep[e.g. evolving the companion to a white dwarf before the \snia\ event; ][]{2011ApJ...730L..34J,2011ApJ...738L...1D,2012ApJ...744...69H,2012ApJ...756L...4H,2012ApJ...758..123W}. 
+
+We propose a spectral follow up on the interesting source Kepler-K. In particular, using a spectrograph with a higher angular resolution to obtain independent spectra of the two sources making up Kepler-K. In addition, one should obtain a follow-up to the HST observations to measure the proper motions of the candidates. Currently only 3 remnants have been spectroscopically searched for donor stars (SN1572, SN1006 and SN1604), which is a statistically low sample. The fourth known Type Ia \snr RCW86 lends itself for an equally involved donor star search. At first glance, this remnant with its low extinction \citep[$A_V \approx 1.7$;][]{1983MNRAS.204..273L} and close proximity to earth \citep[$d=2.5~\kpc$; ][]{2011ApJ...741...96W})  makes it seem ideal. However, there are two seemingly separate expansion fronts (one in the south west and one in the north east) that would make a center determination very difficult. A safe approach is a search area that encompasses both centers, however this would involve scrutinizing many stars. This makes RCW86 currently not feasible for a search and thus Kepler is the last remnant easily searched in the Galaxy. In the future, GAIA will measure distances and thus be able to narrow down the possible candidate stars for RCW86.
+
+
+
+\section{Acknowledgements}
+
+We like to thank Ben Shappee for useful discussions on post explosion donor evolution. Furthermore, Steve Reynolds, Kazik Borkowski, Mary Burkey, and Jacco Vink were providing crucial points about a possible AGB star. 
+
+\bibliographystyle{hapj}
+\bibliography{sn1604_wifes}
+
+
+
+\end{document}
