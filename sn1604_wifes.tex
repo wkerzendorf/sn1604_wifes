@@ -80,14 +80,14 @@ We used the \gls{ifu} called \gls{wifes} mounted on the ANU 2.3m Telescope at th
 
 We have adopted \rasc{17}{30}{41}{6} \decl{-21}{29}{17} as the centre of the remnant from \citet{2008ApJ...689..225K}. Due to the potential uncertainty in the centre determination \citep[for a more detailed discussion about the difficulty of centre determination see Section~2.2 in][]{2012ApJ...759....7K} we split up our observations to cover two fields of $25\arcsec\times38\arcsec$ with an overlap giving a total field of $38\arcsec\times38\arcsec$ (see Figure~\ref{fig:sn1604_overlay}). This setup gives us a minimum search distance of $19\arcsec$ from the proposed centre, corresponding to a velocity of $1420~\kms$ (in the plane of the sky over 400 years) assuming a remnant distance of $6.4~\kpc$ \citep{2012A&A...537A.139C}. 
 
-\include{figure_sn1604_overlay}
+\input{figure_sn1604_overlay}
 
 We selected the I7000 grating which covers a spectral region  ($6830~-~9120~\AA$) with 0.2\AA (7~\kms) resolution. This region includes the \ion{Ca}{2} Triplet (8498\AA, 8542\AA, and 8662\AA) and maximises the Signal to Noise of the stars observed, which are heavily reddened by dust. The \ion{Ca}{2} provides good radial velocity measurements even in low \gls{signalnoise} ratio observations.
 
 The observations were carried out  on 2010 June 15 and 2010 June 16. The exposure time for all observations was $600~\textrm{s}$ with the southern field being observed 33 times ($5.5~h$) and the northern field observed 19 times ($3.2~h$) as weather conditions deteriorated. 
 The seeing ranged between 1.7\arcsec and 2.7\arcsec with a median of 1.9\arcsec (see Figure~\ref{fig:sn1604_candidates} left panel for a sample of the data quality). 
 
-\include{figure_sn1604_candidates}
+\input{figure_sn1604_candidates}
 
 
 WiFeS data were processed using the PyWiFeS package\footnote[1]{{\tt
@@ -123,9 +123,9 @@ The scaled sky was subtracted from the spectra and the resulting spectra (for ea
 
 When compared to model spectra we find that the resolution and quality of the spectra does not allow for a reliable determination of the rotational velocity to better than 200~\kms\ (e.g. see Figure~\ref{fig:kepler-g}). As seen in Figure~\ref{fig:sn1604_candidates} we obtained spectra of sources down to $V = 19.2$ (which corresponds to $L_V = 10\lsun$ taking distance to the remnant and extinction into account). However, we could not obtain individual radial velocities for some of the sources that are blended (at R=7000 - corresponding to a resolution element width of 42~\kms\ - this is not unexpected when examining the radial velocity distribution in Figure~\ref{fig:sn1604_besancon}).
 
-\include{figure_kepler_k_comparison}
+\input{figure_kepler_k_comparison}
 
-\include{table_extraction_vrad}
+\input{table_extraction_vrad}
 
 \section{Discussion}
 \label{sec:discussion}
@@ -155,7 +155,7 @@ Another interpretation is that there are no main-sequence or sub-giant donors in
 
 
 
-\include{figure_sn1604_besancon}
+\input{figure_sn1604_besancon}
 
 
 \section{Conclusion \& Future Work}
